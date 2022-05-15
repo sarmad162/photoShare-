@@ -1,0 +1,29 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon index.js",
+        "server": "nodemon index.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client "
+    },
+    "keywords": [],
+    "author": "Sarmad",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.2",
+        "concurrently": "^7.2.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "http-errors": "^2.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.2.8",
+        "nodemon": "^2.0.15"
+    }
+}
